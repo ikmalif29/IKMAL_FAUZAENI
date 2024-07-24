@@ -13,6 +13,7 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin: 40px;
     border-radius: 8px;
+    height: 78vh;
 }
 
 .main-header {
@@ -66,7 +67,8 @@ body {
 
 .profile-card {
     text-align: center;
-    width: 30%;
+    width: 20%;
+    height: 400px;
     background-color: #f1f1f1;
     padding: 20px;
     border-radius: 8px;
@@ -81,7 +83,7 @@ body {
 }
 
 .profile-details {
-    width: 65%;
+    width: 74%;
 }
 
 .profile-details label {
