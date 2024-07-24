@@ -56,7 +56,7 @@ main {
 .loading-gif {
     width: 80%;
 }
-
+ 
 .image-product {
     width: 350px;
     height: 370px;
@@ -177,6 +177,10 @@ section {
         width: 90%;
     }
 
+    .loading p {
+        font-size: 26px;
+    }
+
     .product-item {
         width: 200px;
         height: 240px;
@@ -229,6 +233,11 @@ section {
         grid-template-columns: repeat(2, 1fr);
         gap: 10px;
         margin-left: 4px;
+        margin-top: 130px;
+    }
+
+    .loading p {
+        font-size: 10px;
     }
 
     .product-item {
