@@ -1,0 +1,215 @@
+header {
+  background-color: rgb(10, 15, 5);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px;
+
+
+  >nav ul {
+    display: flex;
+    width: 300px;
+
+    justify-content: space-between;
+    list-style: none;
+  }
+
+  >nav ul li a {
+    text-decoration: none;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    color: #eaeaea;
+    font-weight: 600;
+    padding: 8px 0;
+    transition: 0ms;
+    transition-duration: 300ms;
+    border-bottom: rgb(142, 7, 7) rgba(0, 0, 0, 0);
+  }
+
+  >nav ul li a:hover {
+    font-size: 18px;
+    color: red;
+  }
+
+  >.profile {
+    display: flex;
+    align-items: center;
+    width: auto;
+
+    >a {
+      display: flex;
+      text-decoration: none;
+      align-items: center;
+      color: white;
+
+      >h3 {
+        transition: 0ms;
+        transition-duration: 100ms;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      }
+    }
+
+    >a h3:hover {
+      cursor: pointer;
+      color: goldenrod;
+    }
+
+    >img {
+      margin-right: 6px;
+      border-radius: 50%;
+    }
+
+    >img:hover {
+      width: 40px;
+      height: 40px;
+      transition: 0ms;
+      transition-duration: 300ms;
+      cursor: pointer;
+    }
+  }
+
+
+}
+
+
+nav {
+  display: block;
+}
+
+.hamburger-toggle {
+  display: block;
+  >a i{
+    color: white;
+  }
+}
+
+@media screen and (min-width : 720px) {
+  nav {
+    display: none;
+  }
+
+  .hamburger-toggle {
+    display: block;
+
+    >a i {
+      font-size: 20px;
+    }
+
+    >a i:hover {
+      font-size: 30px;
+      color: gold;
+    }
+  }
+
+  .profile {
+    margin-right: 12px;
+    display: flex;
+    width: 100px;
+    justify-content: space-between;
+
+    >a {
+      width: 120px;
+
+      >h3 {
+        font-size: 14px;
+      }
+    }
+
+    >a h3:hover {
+      font-size: 17px;
+    }
+
+    >img {
+      width: 30px;
+      height: 30px;
+    }
+  }
+}
+
+@media screen and (min-width : 960px) {
+  header {
+    height: 40px;
+  }
+
+  nav {
+    display: none;
+  }
+
+  .hamburger-toggle {
+    display: block;
+
+    >a i {
+      font-size: 30px;
+    }
+
+    >a i:hover {
+      font-size: 40px;
+      color: gold;
+    }
+  }
+
+  .profile {
+    margin-right: 12px;
+    display: flex;
+    width: 100px;
+    justify-content: space-between;
+
+    >a {
+      width: 150px;
+
+      >h3 {
+        font-size: 18px;
+      }
+    }
+
+    >a h3:hover {
+      font-size: 20px;
+    }
+
+    >img {
+      width: 35px;
+      height: 35px;
+    }
+  }
+}
+
+@media screen and (min-width : 1280px) {
+  header {
+    height: 45px;
+  }
+
+  nav {
+    display: flex;
+
+    >ul li a {
+      font-size: 16px;
+    }
+  }
+
+  .hamburger-toggle {
+    display: none;
+  }
+
+  .profile {
+    margin-right: 12px;
+    display: flex;
+    width: 100px;
+    justify-content: space-between;
+
+    >a {
+      width: 170px;
+
+      >h3 {
+        font-size: 20px;
+      }
+    }
+
+    >a h3:hover {
+      font-size: 22px;
+    }
+
+    >img {
+      width: 40px;
+      height: 40px;
+    }
+  }
+}

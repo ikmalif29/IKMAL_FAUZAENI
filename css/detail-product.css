@@ -1,0 +1,412 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #f4f4f4;
+}
+
+main {
+    margin-top: 110px;
+    display: flex;
+    width: 80%;
+    height: 90vh;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 40px;
+}
+
+.img-product {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.img-product img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.image {
+    width: 70%;
+}
+
+.slide-img {
+    width: 400px;
+    height: 160px;
+    gap: 20px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-product .bx {
+    position: absolute;
+    font-size: 30px;
+    color: #333;
+    cursor: pointer;
+}
+
+.bx.bxs-left-arrow-circle {
+    top: 10px;
+    left: 10px;
+}
+
+.bx.bxs-chevrons-left {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 70px;
+    top: 280px;
+    font-size: 30px;
+}
+
+.bx.bxs-chevrons-right {
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 80px;
+    top: 280px;
+    font-size: 30px;
+    position: absolute;
+}
+
+.slide-img1 {
+    width: 40%;
+    height: 40%;
+}
+
+.slide-img2 {
+    width: 40%;
+    height: 40%;
+}
+
+.description-product {
+    width: 40%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.description-product .name {
+    margin-top: 50px;
+    font-size: 26px;
+}
+
+.description-product .stock {
+    margin-top: 50px;
+    font-size: 22px;
+}
+
+.description-product .price {
+    color: #e63946;
+    font-size: 24px;
+}
+
+.description-product p {
+    font-size: 18px;
+}
+
+.size-select {
+    margin-bottom: 20px;
+}
+
+.add-to-cart,
+.checkout {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-bottom: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.checkout {
+    background-color: orange;
+}
+
+.add-to-cart:hover {
+    background-color: #0056b3;
+}
+
+.checkout:hover {
+    background-color: rgb(157, 103, 2);
+}
+
+.other-products {
+    width: 80%;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.other-products h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.product-card {
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.product-card img {
+    max-width: 100%;
+    height: auto;
+}
+
+.bxs-chevrons-left,
+.bxs-chevrons-right {
+    display: none;
+}
+
+.product-card .product-name {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.product-card .product-price {
+    font-size: 16px;
+    color: #e63946;
+}
+
+/* Tambahkan gaya di bawah ini ke CSS Anda */
+
+.other-products {
+    width: 80%;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    /* Tambahan jarak untuk memisahkan dari konten lain */
+}
+
+.other-products h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    text-align: center;
+    /* Agar judul berada di tengah */
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    /* Tampilkan 4 produk per baris */
+    gap: 20px;
+}
+
+.product-card {
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+    padding: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    /* Tambahkan animasi transisi */
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+    /* Efek hover untuk interaktivitas */
+}
+
+.product-card img {
+    max-width: 100%;
+    height: auto;
+}
+
+.product-card .product-name {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.product-card .product-price {
+    font-size: 16px;
+    color: #e63946;
+}
+/* Table Styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+table,
+th,
+td {
+    /* border: 1px solid #ddd; */
+    padding: 8px;
+}
+
+th {
+    background-color: #f2f2f2;
+    text-align: left;
+}
+
+/* General Popup Styling */
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.popup-content {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 600px;
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.popup h2 {
+    margin-top: 0;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Form Elements Styling */
+label {
+    font-weight: bold;
+    margin-top: 10px;
+    display: block;
+    color: #555;
+}
+
+#payment-method,
+#shipping-address {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+#shipping-address {
+    resize: none;
+}
+
+/* Buttons Styling */
+.popup-buttons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.popup-buttons button {
+    padding: 12px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#cancel-order {
+    background-color: #dc3545;
+    color: #fff;
+}
+
+#cancel-order:hover {
+    background-color: #c82333;
+}
+
+#place-order,
+#complete-order {
+    background-color: #28a745;
+    color: #fff;
+}
+
+#place-order:hover,
+#complete-order:hover {
+    background-color: #218838;
+}
+
+#complete-order:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+/* Payment Proof Styling */
+#payment-proof {
+    margin-top: 10px;
+    display: block;
+}
+
+.payment-proof {
+    margin: 20px 0;
+}
+
+/* Countdown Timer Styling */
+#payment-timer {
+    font-weight: bold;
+    color: #d9534f;
+    font-size: 18px;
+}
+
+
+
+@media (max-width: 768px) {
+    main {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .img-product {
+        width: 100%;
+    }
+
+    .description-product {
+        width: 100%;
+    }
+
+    .bx.bxs-chevrons-left,
+    .bx.bxs-chevrons-right {
+        display: none;
+    }
+}

@@ -1,0 +1,123 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body{
+  font-family: 'Arial', sans-serif;
+}
+main{
+    width: 100%;
+}
+.big-container {
+    width: 100%;
+    margin-top: 100px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.product-item {
+    border-radius: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 22px;
+    cursor: pointer;
+}
+
+.name-product {
+    font-size: 20px;
+    font-family: "Playwrite BE VLG", cursive;
+    font-optical-sizing: auto;
+    font-weight: 700;
+}
+
+.price-product {
+    font-size: 18px;
+}
+
+.bxs-cart-alt {
+    font-size: 24px;
+}
+
+.div-image {
+    width: inherit;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+}
+
+.loading-gif {
+    width: 80%;
+}
+
+.image-product {
+    width: 350px;
+    height: 370px;
+    display: none;
+}
+
+.div-cart {
+    width: inherit;
+    height: 36px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#searchInput {
+    width: 660px;
+    display: none;
+    position: fixed;
+    border: 1px solid black;
+    border-radius: 50px;
+    font-size: 26px;
+    text-align: center;
+}
+
+section {
+    border: 3px solid black;
+    height: 30px;
+    width: 660px;
+    border-radius: 50px;
+    margin-left: 28%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+}
+
+.x {
+    font-size: 20px;
+    color: red;
+    align-items: end;
+    display: none;
+    z-index: 100;
+    margin-left: 630px;
+    cursor: pointer;
+}
+
+/* Pagination styles */
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.pagination button {
+    margin: 0 5px;
+    padding: 10px;
+    border: none;
+    background-color: #f0f0f0;
+    cursor: pointer;
+}
+
+.pagination button.active {
+    font-weight: bold;
+    background-color: #007bff;
+    color: white;
+}

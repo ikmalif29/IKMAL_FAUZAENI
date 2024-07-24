@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="../css/admin.css">
+    <link href='https://unpkg.com/boxicons@latest/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <h2>SpokatStore</h2>
+        </div>
+        <ul class="sidebar-menu">
+            <li class="active" data-target="dashboard"><i class='bx bx-home'></i><a href="#">Dashboard</a></li>
+            <li data-target="users"><i class='bx bxs-user'></i><a href="#">User</a></li>
+            <li data-target="product"><i class='bx bxs-cart-alt'></i><a href="#">Product</a></li>
+            <li data-target="sales-history"><i class='bx bxs-notepad'></i><a href="#">Sales History</a></li>
+        </ul>
+    </div>
+
+    <div class="main-content" id="dashboard">
+        <header>
+            <h1>Dashboard</h1>
+            <div class="user-profile">
+                <img src="https://blue.kumparan.com/image/upload/fl_progressive,fl_lossy,c_fill,q_auto:best,w_640/v1641518726/mnijm34pmvdoy9oa3shw.jpg"
+                    alt="User Profile">
+            </div>
+        </header>
+        <div class="dashboard-content">
+            <div class="stats">
+                <div class="stat-card">
+                    <h3>Total users</h3>
+                    <p id="totalUsers">0</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Total Products</h3>
+                    <p id="totalProducts">0</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Total Orders</h3>
+                    <p id="totalOrders">0</p>
+                </div>
+            </div>
+            <div class="charts">
+                <div class="donuts-chart">
+                    <h3>Total Users by Gender</h3>
+                    <canvas id="genderChart"></canvas>
+                </div>
+                <div class="chart-card">
+                    <h3>Number of Projects Per Month</h3>
+                    <canvas id="projectsChart"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="main-content" id="users">
+        <header>
+            <h1>Table Users</h1>
+            <div class="user-profile">
+                <img src="https://i1.rgstatic.net/ii/profile.image/925337647058944-1597629095324_Q512/Nancya-Ayu-Pratmaning-Putri.jpg"
+                    alt="User Profile">
+            </div>
+        </header>
+        <div class="dashboard-content">
+            <div class="toolbar">
+                <!-- <button class="add-user">Add User</button> -->
+                <input type="text" id="search" placeholder="Search...">
+            </div>
+            <table id="userTable">
+                <thead>
+                    <tr>
+                        <th>NO</th>
+                        <th>NAME</th>
+                        <th>FULL NAME</th>
+                        <th>EMAIL</th>
+                        <th>ACTION</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Data will be populated here -->
+                </tbody>
+            </table>
+            <div class="pagination">
+                <button id="prevPage">«</button>
+                <span id="pageNumber">1</span>
+                <button id="nextPage">»</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="popupContainer" class="popup-container" style="display:none;">
+        <div class="popup-content">
+            <p id="popupUsername">Username: </p>
+            <p id="popupFullName">Full Name: </p>
+            <p id="popupEmail">Email: </p>
+            <button id="closePopupButton">Close</button>
+        </div>
+    </div>
+
+    <div class="main-content" id="product">
+        <header>
+            <h1>Product List</h1>
+            <div class="user-profile">
+                <img src="https://www.matatelinga.com/photo/berita/dir012023/_692_.jpg" alt="User Profile">
+            </div>
+        </header>
+        <div class="dashboard-content">
+            <div class="toolbar">
+                <!-- <button class="add-product">Add Product</button> -->
+                <input type="text" id="productSearch" placeholder="Search...">
+            </div>
+            <table id="productTable">
+                <thead>
+                    <tr>
+                        <th>NO</th>
+                        <th>NAME</th>
+                        <th>STOCK</th>
+                        <th>PRICE</th>
+                        <th>ACTION</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Data will be populated here -->
+                </tbody>
+            </table>
+            <div class="pagination">
+                <button id="productPrevPage">«</button>
+                <span id="productPageNumber">1</span>
+                <button id="productNextPage">»</button>
+            </div>
+        </div>
+        <!-- Popup container for product details -->
+        <div id="detailsPopup" class="details-popup" style="display:none;">
+            <div class="details-popup-content">
+                <h3 id="detailsTitle">Product Details</h3>
+                <p id="detailsName">Name: </p>
+                <p id="detailsPrice">Price: </p>
+                <p id="detailsStock">Stock: </p>
+                <p id="detailsImage">Image 1: </p>
+                <button id="closeDetailsButton">Close</button>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="main-content" id="sales-history">
+        <header>
+            <h1>Sales History</h1>
+            <div class="user-profile">
+                <img src="https://s.kaskus.id/images/2021/12/16/11088101_20211216034644.jpg" alt="User Profile">
+            </div>
+        </header>
+        <div class="dashboard-content">
+            <div class="toolbar">
+                <input type="text" id="salesSearch" placeholder="Search...">
+            </div>
+            <table id="salesTable">
+                <thead>
+                    <tr>
+                        <th>ID Custemer</th>
+                        <th>Product Name</th>
+                        <th>Product Price</th>
+                        <th>QUANTITY</th>
+                        <th>Total Cost</th>
+                        <th>Payment Proff</th>
+                        <th>Status</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Data will be populated here -->
+                </tbody>
+            </table>
+            <div class="pagination">
+                <button id="salesPrevPage">«</button>
+                <span id="salesPageNumber">1</span>
+                <button id="salesNextPage">»</button>
+            </div>
+        </div>
+
+    </div>
+
+    <div id="popup-container" class="popup-hidden">
+        <div class="popup-content">
+            <span class="close-btn">&times;</span>
+            <img src="" alt="Bukti Pembayaran" id="popup-image">
+        </div>
+    </div>
+
+    <div id="edit-popup-container" class="popup-hidden">
+        <div class="popup-content">
+            <span class="close-btn">&times;</span>
+            <form id="edit-form">
+                <label for="edit-status">Edit Status</label>
+                <select name="" id="edit-status" required>
+                    <option value="Processed">Processed</option>
+                    <option value="Shipped">Shipped</option>
+                    <option value="Finished">Finished</option>
+                    <option value="Canceled">Canceled</option>
+                </select>
+                <button type="submit">Save</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="../js/admin.js"></script>
+</body>
+
+</html>

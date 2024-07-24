@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In or Sign Up</title>
+    <link rel="stylesheet" href="../css/signin-signup.css">
+    <link rel="short icon" href="../assets/favicon-login.jpg ">
+</head>
+
+<body>
+    <div class="container" id="container">
+        <div class="form-container sign-up-container">
+            <form>
+                <h1>Sign Up</h1>
+                <div class="social-container">
+                    <a href="#" class="social"><img src="../assets/icon-facebook.jpg" alt=""></a>
+                    <a href="#" class="social"><img src="../assets/icon-google.jpg" alt=""></a>
+                    <a href="#" class="social"><img src="../assets/icon-twitter.jpg" alt=""></a>
+                </div>
+                <span>or use your email for registration</span>
+                <input type="text" placeholder="Name" id="input-name" />
+                <input type="email" placeholder="Username" id="input-user" />
+                <input type="password" placeholder="Password" id="input-pass" />
+                <button onclick="return false;" id="button-sign-up">Sign Up</button>
+            </form>
+        </div>
+        <div class="form-container sign-in-container">
+            <form>
+                <h1>Sign In</h1>
+                <div class="social-container">
+                    <a href="#" class="social"><img src="../assets/icon-facebook.jpg" alt=""></a>
+                    <a href="#" class="social"><img src="../assets/icon-google.jpg" alt=""></a>
+                    <a href="#" class="social"><img src="../assets/icon-twitter.jpg" alt=""></a>
+                </div>
+                <span>or use your account</span>
+                <input type="text" id="username" placeholder="Username" />
+                <input type="password" id="password" placeholder="Password" />
+                <a href="#">Forgot your password?</a>
+                <button id="button-sign-in">Sign In</button>
+            </form>
+        </div>
+        <div class="overlay-container">
+            <div class="overlay">
+                <div class="overlay-panel overlay-left">
+                    <img src="https://png.pngtree.com/png-clipart/20220313/original/pngtree-color-full-sneakers-sepatu-shoes-vector-icon-png-image_7427962.png" class="image1" alt="">
+                    <h3>Welcome Shoppers!</h3>
+                    <p>Do You Have Account? <br>if not, then you have to register first.</p>
+                    <button class="ghost" id="signIn">Sign In</button>
+                </div>
+                <div class="overlay-panel overlay-right">
+                    <img src="https://png.pngtree.com/png-clipart/20220313/original/pngtree-color-full-sneakers-sepatu-shoes-vector-icon-png-image_7427962.png" alt="">
+                    <h1>Hallo, Friend!</h1>
+                    <p>Please enter Your Username and Pasword to Sign In</p>
+                    <button class="ghost" id="signUp">Sign Up</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="module"  src="../js/signin-signup.js"></script>
+</body>
+
+</html>

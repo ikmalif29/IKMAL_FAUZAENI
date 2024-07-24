@@ -1,0 +1,115 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Arial', sans-serif;
+}
+main {
+    margin-top: 100px;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.about-section {
+    background: #fff;
+    padding: 50px 20px;
+    margin-top: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.about-section h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.about-section p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+.column {
+    width: 45%;
+}
+
+.column h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.column p,
+.column ul {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.column ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.column ul li {
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 25px;
+}
+
+.column ul li::before {
+    content: '\2022';
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 24px;
+    color: #333;
+}
+
+.history,
+.team {
+    margin-bottom: 40px;
+}
+
+.history h2,
+.team h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.team-members {
+    display: flex;
+    justify-content: space-around;
+}
+
+.member {
+    text-align: center;
+    width: 45%;
+}
+
+.member img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.member h3 {
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.member p {
+    font-size: 16px;
+    color: #666;
+}

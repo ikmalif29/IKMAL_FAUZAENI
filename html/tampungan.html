@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="../css/admin.css">
+</head>
+
+<body>
+    <main>
+
+        <div class="sidebar">
+            <h2>Spokat Store</h2>
+            <ul>
+                <li><a href="#" class="dashboard">Dashboard</a></li>
+                <li><a href="#" class="custemer">Custemer</a></li>
+                <li><a href="#" class="product">Products</a></li>
+                <li><a href="#">Transaksi</a></li>
+        </ul>
+    </div>
+    <div class="content">
+        <div class="header">
+            <h1>Dashboard</h1>
+        </div>
+        <div class="cards">
+            <div class="card">
+                <h3>5</h3>
+                <p>Transaksi Hari Ini</p>
+                <a href="#">More Info</a>
+            </div>
+            <div class="card">
+                <h3>2</h3>
+                <p>Produk Transaksi Terakhir</p>
+                <a href="#">More Info</a>
+            </div>
+            <div class="card">
+                <h3>40</h3>
+                <p>Stok Masuk Hari Ini</p>
+                <a href="#">More Info</a>
+            </div>
+        </div>
+        <div class="charts">
+            <div class="chart">
+                <h2>Produk Terlaris</h2>
+            </div>
+            <div class="chart">
+                <h2>Stok Produk</h2>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <h1>Product List</h1>
+        <table id="productTable">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Category</th>
+                    <th>Price</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Data will be inserted here -->
+            </tbody>
+        </table>
+    </div>
+    <div class="users">
+        <h1>Sepokat Store Users</h1>
+        <div id="users-list"></div>
+    </div>
+</main>
+    <script src="../js/admin.js"></script>
+</body>
+
+</html>

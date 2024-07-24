@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Detail</title>
+    <link href='https://unpkg.com/boxicons@latest/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/detail-product.css">
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+</head>
+
+<body>
+    <header class="main-header">
+        <div class="navbar">
+            <h2 class="nav">Sepokat Store</h2>
+            <ul>
+                <li>
+                    <a href="./index.html" class="a1">Home</a>
+                </li>
+                <li>
+                    <a href="./shop.html" class="a2">Shop</a>
+                </li>
+                <li>
+                    <a href="./about.html" class="a3">About</a>
+                </li>
+            </ul>
+            <div class="icons">
+                <i class='bx bx-search search'></i>
+                <i class='bx bxs-user-circle user'></i>
+                <i class='bx bx-shopping-bag cart'></i>
+                <span id="cart-count" class="cart-count">0</span>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="img-product">
+            <i class="bx bxs-left-arrow-circle"></i>
+            <i class="bx bxs-chevrons-left"></i>
+            <img src="" alt="" class="image">
+            <i class="bx bxs-chevrons-right"></i>
+            <div class="slideImg">
+                <img src="" alt="" class="image2">
+            </div>
+        </div>
+        <div class="description-product">
+            <h1 class="name"></h1>
+            <h1 class="price"></h1>
+            <h1 class="stock"></h1>
+            <p>
+                Enjoy comfort and style with the <span class="name-desc"></span>. Designed to meet the needs of your
+                active lifestyle, these shoes combine cutting-edge technology with modern design. Ideal for various
+                activities, whether for casual strolls or workouts, these shoes will be the perfect choice for those who
+                seek both performance and appearance at their best..
+            </p>
+            <button class="add-to-cart">ADD TO CART</button>
+            <button class="checkout">CHECKOUT <i class='bx bxs-cart-alt'></i></button>
+        </div>
+    </main>
+    <section class="other-products">
+        <h2>OTHER PRODUCTS YOU MIGHT LIKE</h2>
+        <div class="products-grid" id="other-products-grid">
+            <!-- Produk lainnya akan dimuat di sini -->
+        </div>
+    </section>
+
+       <!-- Checkout Popup -->
+       <div id="checkout-popup" class="popup">
+        <div class="popup-content">
+            <h2>Checkout</h2>
+            <div id="checkout-products">
+                <!-- Produk yang dipilih akan ditampilkan di sini -->
+            </div>
+            <label for="payment-method">Payment Method:</label>
+            <select id="payment-method">
+                <option value="Kredit">Kredit Card</option>
+                <option value="transfer">Bank Transfer</option>
+            </select>
+            <label for="shipping-address">Shipping Address:</label>
+            <textarea id="shipping-address" rows="4" placeholder="Enter your shipping address"></textarea>
+            <div class="popup-buttons">
+                <button id="cancel-order">Cancel Order</button>
+                <button id="place-order">Place Order</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Payment Confirmation Popup -->
+    <div id="payment-popup" class="popup">
+        <div class="popup-content">
+            <h2>Payment Confirmation</h2>
+            <p>Please complete the payment within <span id="payment-timer">20:00</span> minutes if your payment method
+                is not COD.</p>
+            <input type="file" id="payment-proof" />
+            <button id="complete-order" disabled>Complete Order</button>
+        </div>
+    </div>
+
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-about">
+                <h3>About Sepokat Store</h3>
+                <p>Welcome to Sepokat Store – your ultimate destination for the finest footwear. Discover a range of
+                    styles that match your personality and keep your feet comfortable. Shop with us and enjoy the
+                    perfect blend of quality and style.</p>
+            </div>
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./shop.html">Shop</a></li>
+                    <li><a href="https://sepatucompass.com/" target="_blank">Category</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-social">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="https://www.tiktok.com/@imalbaikhati" target="_blank" class="social-icon"><i
+                            class='bx bxl-tiktok'></i></i></a>
+                    <a href="#" class="social-icon"><i class='bx bxl-twitter'></i></a>
+                    <a href="https://www.instagram.com/iimaalls/" target="_blank" class="social-icon"><i
+                            class='bx bxl-instagram'></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Sepokat Store. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+ 
+
+    <script src="../js/detail-product.js"></script>
+</body>
+
+</html>

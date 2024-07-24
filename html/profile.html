@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Page</title>
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/profile.css">
+    <link href='https://unpkg.com/boxicons@latest/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="../css/footer.css">
+</head>
+
+<body>
+    <header class="main-header">
+        <div class="navbar">
+            <h2 class="nav">Sepokat Store</h2>
+            <ul>
+                <li>
+                    <a href="./index.html" class="a1">Home</a>
+                </li>
+                <li>
+                    <a href="./shop.html" class="a2">Shop</a>
+                </li>
+                <li>
+                    <a href="./about.html" class="a3">About</a>
+                </li>
+            </ul>
+            <div class="icons">
+                <i class='bx bx-search search'></i>
+                <i class='bx bxs-user-circle user'></i>
+                <i class='bx bx-shopping-bag cart'></i>
+                <span id="cart-count" class="cart-count">0</span>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="profile-container">
+            <div class="profile-content">
+                <h2>Profile</h2>
+                <form>
+                    <div class="form-group">
+                        <div class="avatar-container">
+                            <img src="https://www.freeiconspng.com/thumbs/profile-icon-png/profile-icon-9.png"
+                                alt="Avatar" id="avatar">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="username">Username:</label>
+                        <input type="text" id="username" class="inp-username">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">E-mail:</label>
+                        <input type="email" id="email" class="inp-email">
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password:</label>
+                        <input type="text" id="password" disabled value="******">
+                    </div>
+                    <!-- <div class="form-group">
+                        <label for="repeat-password">Repeat Password:</label>
+                        <input type="password" id="repeat-password" value="bigbigworld123">
+                    </div> -->
+                    <div class="form-group">
+                        <label for="full-name">Full Name:</label>
+                        <input id="full-name" class="inp-full-name"></input>
+                    </div>
+                    <button type="submit" class="btn-update-information">Update Information</button>
+                    <button id="logout-btn">Sign Out</button> <!-- Button Logout Ditambahkan di sini -->
+                </form>
+
+            </div>
+        </div>
+    </main>
+    <h2 class="history">Purchase History</h2>
+    <div class="purchase-history" id="purchase-history">
+        <!-- Riwayat pembelian akan ditampilkan di sini -->
+    </div>
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-about">
+                <h3>About Sepokat Store</h3>
+                <p>Welcome to Sepokat Store – your ultimate destination for the finest footwear. Discover a range of
+                    styles that match your personality and keep your feet comfortable. Shop with us and enjoy the
+                    perfect blend of quality and style.</p>
+            </div>
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./shop.html">Shop</a></li>
+                    <li><a href="https://sepatucompass.com/" target="_blank">Category</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-social">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="https://www.tiktok.com/@imalbaikhati" target="_blank" class="social-icon"><i
+                            class='bx bxl-tiktok'></i></i></a>
+                    <a href="#" class="social-icon"><i class='bx bxl-twitter'></i></a>
+                    <a href="https://www.instagram.com/iimaalls/" target="_blank" class="social-icon"><i
+                            class='bx bxl-instagram'></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Sepokat Store. All Rights Reserved.</p>
+        </div>
+    </footer>
+    <script src="../js/profile.js"></script>
+</body>
+
+</html>
