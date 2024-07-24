@@ -22,6 +22,7 @@ Sepokat Store is an online shoe store designed to offer an elegant and interacti
 ### 1. Homepage
 
 ![Homepage](./assets/home.png)
+![Homepage](./assets/home2.png)
 
 The homepage displays featured products and various promotions. Users can navigate to different sections and view the latest offers.
 
