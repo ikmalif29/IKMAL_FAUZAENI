@@ -593,5 +593,7 @@ document.addEventListener('DOMContentLoaded', () => {
     setupSalesPagination(data);
 });
 
-
+document.querySelector('.image').addEventListener('click', ()=>{
+    window.location.href = "./profile-admin.html"
+})
 
