@@ -48,11 +48,10 @@ header {
             >a {
                 font-family: "Roboto Mono", monospace;
                 font-optical-sizing: auto;
-                font-weight : 900;
+                font-weight: 900;
                 font-style: normal;
                 text-decoration: none;
                 color: black;
-                font-size: 24px;
             }
 
             >a:hover {
@@ -143,4 +142,96 @@ header {
     font-size: 32px;
     /* Ukuran teks yang sedikit lebih besar */
     color: #333;
+}
+
+
+@media (max-width : 2000px) {
+
+    .navbar h2 {
+        margin-top: 14px;
+        font-size: 36px;
+        margin-left: 34px;
+    }
+    .navbar a {
+        font-size: 28px;
+    }
+}
+
+@media (max-width : 1024px) {
+
+    .navbar a {
+        font-size: 26px;
+    }
+}
+
+@media (max-width : 768px) {
+
+    .navbar h2 {
+        font-size: 26px;
+        margin-left: 34px;
+    }
+    
+    .navbar a {
+        font-size: 20px;
+    }
+
+    .icons {
+        gap: 20px;
+        justify-content: center;
+    }
+
+    .icons i {
+        margin-top: 6px;
+        font-size: 22px;
+    }
+
+    .cart-count {
+        margin-top: 8px;
+        right: 24px;
+        padding: 2px 4px;
+        font-size: 8px;
+    }
+}
+
+@media (max-width : 320px) {
+    header {
+        height: auto;
+    }
+
+    .navbar {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .navbar h2 {
+        display: none;
+    }
+
+    .navbar ul {
+        gap: 20px;
+        justify-content: center;
+    }
+
+    .navbar a {
+        font-weight: 700;
+        font-size: 18px;
+    }
+
+    .icons {
+        gap: 20px;
+        margin-left: 28px;
+        margin-right: 0;
+        justify-content: center;
+    }
+
+    .icons i {
+        font-size: 18px;
+    }
+
+    .cart-count {
+        top: 86px;
+        right: 100px;
+        padding: 2px 4px;
+        font-size: 6px;
+    }
 }
