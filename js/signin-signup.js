@@ -24,7 +24,7 @@ buttonLogin.addEventListener("click", async (event) => {
             localStorage.setItem("userLogin", JSON.stringify(user))
             alert("Login successful");
             window.location.href = "../html/index.html"
-        } else { 
+        } else {
             // jika usename dan pasword salah maka akan menampilkan alert 
             alert("Gagal login");
         }
@@ -35,29 +35,32 @@ buttonLogin.addEventListener("click", async (event) => {
     }
 });
 //  sigin atau daftar
-const buttonSignUp = document.querySelector("#button-sign-up");
-buttonSignUp.addEventListener("click", (event) => {
-    event.preventDefault();
-
+document.getElementById("registerForm").addEventListener("submit", (e) => {
+    e.preventDefault();
     const dataName = document.querySelector("#input-name").value;
     const dataUsername = document.querySelector("#input-user").value;
     const dataPass = document.querySelector("#input-pass").value;
     // data akan di simpan di api
+    console.log(dataName);
     let baru = {
         username: dataUsername,
         password: dataPass,
-        name: dataName,
-        status: "aktip",
+        full_name: dataName,
     };
     console.log(baru);
-    dataUser.push(baru);
-    console.log(dataUser);
-
-    // dataUser[dataUser.length+1].name=dataName
-    // dataUser[dataUser.length+1].username=dataUsername
-    // dataUser[dataUser.length+1].password=dataPass
-    // dataUser[dataUser.length+1].status="aktif"
-});
+    try {
+        const data = apiFetch(
+            "https://sepokat-store.vercel.app/api/user/register",
+            "POST",
+            baru
+        );
+        console.log("Data fetched successfully:", data);
+        alert(`Sign Up Sucsesfuly`);
+        window.location.reload();
+    } catch (error) {
+        console.error("Error fetching data:", error);
+    }
+})
 
 signUpButton.addEventListener("click", () => {
     container.classList.add("right-panel-active");
@@ -66,3 +69,4 @@ signUpButton.addEventListener("click", () => {
 signInButton.addEventListener("click", () => {
     container.classList.remove("right-panel-active");
 });
+
