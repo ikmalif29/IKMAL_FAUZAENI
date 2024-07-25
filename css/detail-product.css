@@ -123,10 +123,6 @@ main {
     font-size: 18px;
 }
 
-.size-select {
-    margin-bottom: 20px;
-}
-
 .add-to-cart,
 .checkout {
     padding: 10px 20px;
@@ -152,18 +148,6 @@ main {
     background-color: rgb(157, 103, 2);
 }
 
-.other-products {
-    width: 80%;
-    background-color: #fff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-    padding: 20px;
-}
-
-.other-products h2 {
-    margin-bottom: 20px;
-    font-size: 24px;
-}
 
 .products-grid {
     display: grid;
@@ -201,7 +185,6 @@ main {
     color: #e63946;
 }
 
-/* Tambahkan gaya di bawah ini ke CSS Anda */
 
 .other-products {
     width: 80%;
@@ -210,7 +193,6 @@ main {
     border-radius: 10px;
     padding: 20px;
     margin-bottom: 20px;
-    /* Tambahan jarak untuk memisahkan dari konten lain */
 }
 
 .other-products h2 {
@@ -258,6 +240,7 @@ main {
     font-size: 16px;
     color: #e63946;
 }
+
 /* Table Styles */
 table {
     width: 100%;
@@ -389,11 +372,43 @@ label {
     font-size: 18px;
 }
 
+@media (max-width: 1440px) {
+    main {
+        height: 110vh;
+    }
+}
 
+@media (max-width: 1024px) {
+    main {
+        height: 110vh;
+    }
+
+    .description-product .name {
+        font-size: 22px;
+    }
+
+    .description-product .price {
+        font-size: 20px;
+    }
+
+    .description-product .stock {
+        margin-top: 20px;
+        font-size: 20px;
+    }
+
+    .description-product p {
+        font-size: 14px;
+    }
+
+    .other-products{
+        width: 86%;
+    }
+}
 
 @media (max-width: 768px) {
     main {
         flex-direction: column;
+        width: 90%;
         height: auto;
     }
 
@@ -403,10 +418,140 @@ label {
 
     .description-product {
         width: 100%;
+        text-align: center;
     }
 
     .bx.bxs-chevrons-left,
     .bx.bxs-chevrons-right {
+        display: none;
+    }
+
+    .description-product .name {
+        font-size: 22px;
+    }
+
+    .description-product .stock {
+        margin-top: 20px;
+        font-size: 22px;
+    }
+
+    .description-product .price {
+        font-size: 20px;
+    }
+
+    .description-product p {
+        white-space: break-spaces;
+        font-size: 10px;
+    }
+
+    .add-to-cart,
+    .checkout {
+        width: 94%;
+        font-size: 16px;
+    }
+
+    .other-products {
+        width: 90%;
+    }
+
+    .other-products h2 {
+        font-size: 20px;
+    }
+
+    .product-card .product-name {
+        font-size: 14px;
+    }
+
+    .product-card .product-price {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 320px) {
+    main {
+        flex-direction: column;
+        width: 90%;
+        height: auto;
+        margin-top: 140px;
+    }
+
+    .img-product {
+        width: 100%;
+    }
+
+    .slide-img {
+        height: 140px;
+        gap: 10px;
+    }
+
+    .img-product .bx {
+        font-size: 20px;
+    }
+
+    .slide-img1 {
+        width: 20%;
+        height: 20%;
+    }
+
+    .slide-img2 {
+        width: 20%;
+        height: 20%;
+    }
+
+
+    .description-product {
+        width: 90%;
+        text-align: center;
+    }
+
+    .bx.bxs-chevrons-left,
+    .bx.bxs-chevrons-right {
+        display: none;
+    }
+
+    .description-product .name {
+        font-size: 14px;
+    }
+
+    .description-product .stock {
+        margin-top: 20px;
+        font-size: 12px;
+    }
+
+    .description-product .price {
+        font-size: 14px;
+    }
+
+    .description-product p {
+        white-space: unset;
+        font-size: 8px;
+    }
+
+    .add-to-cart,
+    .checkout {
+        width: 94%;
+        font-size: 12px;
+    }
+
+    .other-products {
+        width: 84%;
+        gap: 4px;
+    }
+
+    .other-products h2 {
+        font-size: 14px;
+    }
+
+    .product-card .product-name {
+        display: none;
+    }
+
+    .product-card{
+        width: 80%;
+        height: auto;
+    }
+    
+    .product-card .product-price {
         display: none;
     }
 }
