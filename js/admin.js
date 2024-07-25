@@ -96,7 +96,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 labels: ['Processed', 'Shipped', 'Finished', 'Canceled'],
                 datasets: [{
                     data: orderStatusCounts,
-                    backgroundColor: ['#36A2EB', '#FFCE56', '#4BC0C0', '#FF6384']
+                    backgroundColor: ['orange', 'grey', 'lime', 'red']
                 }]
             },
             options: {
