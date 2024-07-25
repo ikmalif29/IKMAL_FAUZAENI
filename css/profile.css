@@ -91,7 +91,7 @@ button[type="submit"]:hover {
 }
 
 .status {
-    font-size: 22px;
+    font-size: 24px;
 }
 
 /* Button logout di pojok kanan bawah */
@@ -99,10 +99,10 @@ button[type="submit"]:hover {
     background-color: #e74c3c;
     color: white;
     border: none;
-    padding: 10px 20px;
+    padding: 9px 20px;
     border-radius: 4px;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 15px;
 }
 
 #logout-btn:hover {
@@ -153,6 +153,166 @@ button[type="submit"]:hover {
     margin-bottom: 5px;
 }
 
+@media (max-width : 1440px) {
+    .profile-container {
+        margin-top: 200px;
+        width: 90%;
+        margin-bottom: 70px;
+    }
+    
+    #logout-btn {
+        font-size: 14px;
+    }
+    
+    .btn-update-information {
+        padding: 6px 14px;
+        font-size: 14px;
+    }
+    
+    .history{
+        font-size: 19px;
+        font-weight: 900;
+    }
+    
+    .purchase-item{
+        width: 90%;
+    }
+    
+    .name {
+        font-size: 18px;
+    }
+    
+    .price{
+        font-size: 18px;
+    }
+    
+    .quantity{
+        font-size: 18px;
+    }
+
+    .status{
+        font-size: 24px;
+    } 
+}
+
+@media (max-width : 1024px) {
+    .profile-container {
+        margin-top: 190px;
+        width: 90%;
+        margin-bottom: 70px;
+    }
+
+    .profile-content h2 {
+        font-size: 18px;
+    }
+
+    .avatar-container {
+        gap: 0;
+    }
+
+    #avatar {
+        width: 80px;
+        height: 80px;
+    }
+
+    .form-group label {
+        font-size: 14px;
+    }
+
+    #logout-btn {
+        font-size: 14px;
+    }
+
+    .btn-update-information {
+        padding: 6px 14px;
+        font-size: 14px;
+    }
+
+    .history {
+        font-size: 18px;
+        font-weight: 900;
+    }
+
+    .purchase-item {
+        width: 90%;
+    }
+
+    .name {
+        font-size: 16px;
+    }
+
+    .price {
+        font-size: 14px;
+    }
+
+    .quantity {
+        font-size: 14px;
+    }
+
+    .status {
+        font-size: 20px;
+    }
+}
+
+@media (max-width : 768px) {
+    .profile-container {
+        margin-top: 180px;
+        width: 90%;
+        margin-bottom: 70px;
+    }
+
+    .profile-content h2 {
+        font-size: 16px;
+    }
+
+    .avatar-container {
+        gap: 0;
+    }
+
+    #avatar {
+        width: 70px;
+        height: 70px;
+    }
+
+    .form-group label {
+        font-size: 12px;
+    }
+
+    #logout-btn {
+        font-size: 12px;
+    }
+
+    .btn-update-information {
+        padding: 6px 14px;
+        font-size: 12px;
+    }
+
+    .history {
+        font-size: 16px;
+        font-weight: 900;
+    }
+
+    .purchase-item {
+        width: 90%;
+    }
+
+    .name {
+        font-size: 12px;
+    }
+
+    .price {
+        font-size: 12px;
+    }
+
+    .quantity {
+        font-size: 12px;
+    }
+
+    .status {
+        font-size: 18px;
+    }
+}
+
 @media (max-width : 320px) {
     .profile-container {
         margin-top: 220px;
@@ -188,14 +348,15 @@ button[type="submit"]:hover {
         font-size: 12px;
     }
 
-    .history{
+    .history {
         font-size: 12px;
         font-weight: 900;
     }
 
-    .purchase-item{
+    .purchase-item {
         width: 84%;
     }
+
     .purchase-item img {
         max-width: 60px;
         margin-right: 10px;
@@ -204,16 +365,16 @@ button[type="submit"]:hover {
     .name {
         font-size: 8px;
     }
-    
-    .price{
-        font-size: 8px;
-    }
-    
-    .quantity{
+
+    .price {
         font-size: 8px;
     }
 
-    .status{
+    .quantity {
+        font-size: 8px;
+    }
+
+    .status {
         font-size: 10px;
     }
 }
