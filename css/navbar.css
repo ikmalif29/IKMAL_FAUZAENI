@@ -199,7 +199,7 @@ header {
     }
 
     .navbar {
-        flex-direction: column;
+        flex-direction: column-reverse;
         justify-content: center;
     }
 
@@ -229,8 +229,8 @@ header {
     }
 
     .cart-count {
-        top: 86px;
-        right: 100px;
+        top: 24px;
+        right: 102px;
         padding: 2px 4px;
         font-size: 6px;
     }
