@@ -42,10 +42,10 @@ btnCart.addEventListener("click", () => {
 document.getElementById('logout-btn').addEventListener('click', () => {
     // Menghapus data pengguna dari localStorage
     localStorage.removeItem('userLogin');
-    
+
     // Memberi tahu pengguna bahwa mereka telah logout
     alert('You have been logged out');
-    
+
     // Mengarahkan pengguna ke halaman login atau homepage
     window.location.href = './index.html'; // Ganti dengan URL halaman login jika ada
 });
@@ -57,7 +57,7 @@ if (data) {
     const userPassword = document.querySelector('#password');
     const userEmail = document.querySelector('#email')
     const userFullName = document.querySelector('#full-name')
-    
+
     userName.value = data.username || ''; // Pastikan data.username ada
     // userPassword.value = data.pasword || ''; // Pastikan data.password ada
     userEmail.value = data.email || '';
@@ -71,8 +71,8 @@ document.querySelector('form').addEventListener('submit', (e) => {
     // Implementasikan fungsi update profil di sini
 });
 
- // JavaScript untuk mengisi riwayat pembelian
- document.addEventListener('DOMContentLoaded', () => {
+// JavaScript untuk mengisi riwayat pembelian
+document.addEventListener('DOMContentLoaded', () => {
     // history pembelian sesuai id user
     const purchaseHistoryElement = document.getElementById('purchase-history');
     const purchases = JSON.parse(localStorage.getItem('orders')) || [];
@@ -98,14 +98,17 @@ document.querySelector('form').addEventListener('submit', (e) => {
 
         // Membuat elemen untuk detail
         const detailsDiv = document.createElement('div');
-        
+
         const productName = document.createElement('h3');
         productName.textContent = purchase.products.name;
-
+        productName.classList.add('name')
+        
         const price = document.createElement('p');
+        price.classList.add('price')
         price.textContent = `Price: $${purchase.products.price}`;
-
+        
         const quantity = document.createElement('p');
+        quantity.classList.add('quantity')
         quantity.textContent = `Quantity: ${purchase.subtotal}`;
 
         const status = document.createElement('div')
@@ -113,16 +116,16 @@ document.querySelector('form').addEventListener('submit', (e) => {
         statusProduct.classList.add("status")
         statusProduct.textContent = purchase.status;
 
-        if(purchase.status === "Canceled"){
+        if (purchase.status === "Canceled") {
             statusProduct.style.color = "red"
         }
-        else if(purchase.status === "Shipped"){
+        else if (purchase.status === "Shipped") {
             statusProduct.style.color = "grey"
         }
-        else if(purchase.status === "Processed"){
+        else if (purchase.status === "Processed") {
             statusProduct.style.color = "orange"
         }
-        else if(purchase.status === "Finished"){
+        else if (purchase.status === "Finished") {
             statusProduct.style.color = "lime"
         }
 
@@ -155,7 +158,7 @@ const updateCartCount = () => {
 window.onload = updateCartCount;
 
 
-document.querySelector('.btn-update-information').addEventListener('click', () =>{
+document.querySelector('.btn-update-information').addEventListener('click', () => {
     const userLogin = JSON.parse(localStorage.getItem("userLogin"))
     const inpUsername = document.querySelector(".inp-username")
     userLogin.username = inpUsername.value;
