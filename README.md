@@ -24,37 +24,39 @@ Sepokat Store merupakan toko sepatu online yang dirancang untuk menawarkan penga
 ![Homepage](./assets/home.png)
 ![Homepage](./assets/home2.png)
 
-The homepage displays featured products and various promotions. Users can navigate to different sections and view the latest offers.
+Beranda menampilkan produk unggulan dan berbagai promosi. Pengguna dapat menavigasi ke berbagai bagian dan melihat penawaran terbaru.
 
 ### 2. Product Page
 
-![Product Page](images/product-page.png)
+![Product Page](./assets/image-product.png)
+![Product Page](./assets/image-product2.png)
 
-The product page provides detailed information about each product, including images, descriptions, and prices. Users can add products to their cart from this page.
+Halaman produk memberikan informasi detail tentang setiap produk, termasuk gambar, deskripsi, dan harga. Pengguna dapat menambahkan produk ke keranjang mereka dari halaman ini.
 
 ### 3. Cart Page
 
-![Cart Page](images/cart-page.png)
+![Cart Page](./assets/cart.png)
 
-On the cart page, users can review their selected products, adjust quantities, and proceed to checkout.
+Di halaman keranjang, pengguna dapat meninjau produk pilihan mereka, menyesuaikan jumlah, dan melanjutkan ke pembayaran.
 
 ### 4. Checkout Page
 
-![Checkout Page](images/checkout-page.png)
+![Checkout Page](./assets/checkout.png)
 
-The checkout page allows users to enter shipping addresses, select payment methods, and complete their orders.
+Halaman checkout memungkinkan pengguna memasukkan alamat pengiriman, memilih metode pembayaran, dan menyelesaikan pesanan mereka.
 
 ### 5. Profile Page
 
-![Profile Page](images/profile-page.png)
+![Profile Page](./assets/profile.png)
+![Profile Page](./assets/profile2.png)
 
-The profile page enables users to update their personal information, view their purchase history, and log out.
+Halaman profil memungkinkan pengguna memperbarui informasi pribadi mereka, melihat riwayat pembelian, dan keluar.
 
 ### 6. Admin Dashboard
 
-![Admin Dashboard](images/admin-dashboard.png)
+![Admin Dashboard](./assets/admin.png)
 
-The admin dashboard provides an overview of total users, products, and orders. It also includes charts and statistics for better management and analysis.
+Dasbor admin memberikan gambaran total pengguna, produk, dan pesanan. Ini juga mencakup grafik dan statistik untuk pengelolaan dan analisis yang lebih baik.
 
 ## Getting Started
 
