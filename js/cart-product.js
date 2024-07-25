@@ -69,7 +69,7 @@ const displayCartProducts = () => {
         productPrice.textContent = `Price Product: IDR ${parseInt(product.price).toLocaleString('id-ID')}`;
 
         const productCategory = document.createElement('p');
-        productCategory.textContent = `Category Product: ${product.category || 'Umum'}`;
+        productCategory.textContent = `Category Product: ${product.category || 'Lifestyle'}`;
 
         productInfo.appendChild(productName);
         productInfo.appendChild(productPrice);
@@ -316,7 +316,7 @@ document.getElementById('cancel-order').addEventListener('click', () => {
 document.getElementById('place-order').addEventListener('click', () => {
     hidePopup('checkout-popup');
     showPopup('payment-popup');
-    startTimer(1 * 10, document.getElementById('payment-timer'));
+    startTimer(1 * 60, document.getElementById('payment-timer'));
 });
 
 // Event listener untuk input bukti pembayaran
