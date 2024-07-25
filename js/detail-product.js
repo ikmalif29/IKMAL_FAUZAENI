@@ -54,7 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     
     const stockProduct = document.querySelector('.stock')
-    stockProduct.textContent = `Stock Product : ${localStorage.getItem('stock-product')}`;
+    stockProduct.textContent = `Stock Product : Evailebel`;
     
     const addToCartButton = document.querySelector(".add-to-cart");
     addToCartButton.addEventListener('click', (event) => {
@@ -133,33 +133,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 document.addEventListener('DOMContentLoaded', () => {
-    // Existing code...
-    // Load other products
-    // Checkout button click event
+    
     const checkoutButton = document.querySelector('.checkout');
     checkoutButton.addEventListener('click', () => {
         displayCheckoutProducts();
         showPopup('checkout-popup');
     });
 
-    // Modal elements
-    const modal = document.getElementById("checkoutModal");
-    const span = document.getElementsByClassName("close")[0];
-    const cancelButton = document.getElementById("cancelButton");
-
-    span.onclick = function () {
-        modal.style.display = "none";
-    }
-
-    cancelButton.onclick = function () {
-        modal.style.display = "none";
-    }
-
-    window.onclick = function (event) {
-        if (event.target == modal) {
-            modal.style.display = "none";
-        }
-    }
     loadOtherProducts();
 });
 
@@ -294,7 +274,7 @@ function loadOtherProducts() {
             let currentIndex = 0;
 
             function renderProducts(startIndex) {
-                otherProductsGrid.innerHTML = '';
+                otherProductsGrid.textContent = '';
                 const endIndex = Math.min(startIndex + 4, filteredProducts.length);
                 for (let i = startIndex; i < endIndex; i++) {
                     const product = filteredProducts[i];
@@ -331,23 +311,6 @@ function loadOtherProducts() {
             }
 
             renderProducts(currentIndex);
-
-            // const prevBtn = document.querySelector('.prev-btn');
-            // const nextBtn = document.querySelector('.next-btn');
-
-            // prevBtn.addEventListener('click', () => {
-            //     if (currentIndex > 0) {
-            //         currentIndex -= 4;
-            //         renderProducts(currentIndex);
-            //     }
-            // });
-
-            // nextBtn.addEventListener('click', () => {
-            //     if (currentIndex + 4 < filteredProducts.length) {
-            //         currentIndex += 4;
-            //         renderProducts(currentIndex);
-            //     }
-            // });
         })
     // .catch(error => console.error('Error loading other products:', error));
     updateCartCount();
