@@ -1,15 +1,15 @@
 # Sepokat Store
 
-Sepokat Store is an online shoe store designed to offer an elegant and interactive shopping experience. The website is built using HTML, CSS, and JavaScript to provide a responsive and user-friendly interface.
+Sepokat Store merupakan toko sepatu online yang dirancang untuk menawarkan pengalaman berbelanja yang elegan dan interaktif. Situs web ini dibangun menggunakan HTML, CSS, dan JavaScript untuk menyediakan antarmuka yang responsif dan ramah pengguna.
 
 ## Features
 
-- **Homepage**: Showcases featured products and promotions.
-- **Product Page**: Detailed product information and options to add items to the cart.
-- **Cart Page**: View selected products, adjust quantities, and proceed to checkout.
-- **Checkout Page**: Manage shipping addresses and payment options.
-- **Profile Page**: Update profile information, view purchase history, and log out.
-- **Admin Dashboard**: View statistics, manage products, and check order statuses.
+- **Homepage**: Menampilkan produk unggulan dan promosi.
+- **Product Page**: Informasi produk terperinci dan opsi untuk menambahkan item ke keranjang.
+- **Cart Page**: Lihat produk yang dipilih, sesuaikan jumlah, dan lanjutkan ke pembayaran.
+- **Checkout Page**: Kelola alamat pengiriman dan opsi pembayaran.
+- **Profile Page**: Perbarui informasi profil, lihat riwayat pembelian, dan keluar.
+- **Admin Dashboard**: Lihat statistik, kelola produk, dan periksa status pesanan.
 
 ## Technologies Used
 
