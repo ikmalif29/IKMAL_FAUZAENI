@@ -244,7 +244,7 @@ label {
 }
 
 
-@media (max-width: 320px) {
+@media (max-width: 426px) {
     main{
         margin-top: 130px;
     }
@@ -258,11 +258,11 @@ label {
         align-items: center;
         justify-content: center;
         width: 10px;
-        height: 10px;
+        height: 12px;
     }
 
     .cart-item-quantity span {
-        font-size: 8px;
+        font-size: 10px;
     }
 
     .cart-item p {

@@ -313,7 +313,7 @@ button[type="submit"]:hover {
     }
 }
 
-@media (max-width : 320px) {
+@media (max-width : 426px) {
     .profile-container {
         margin-top: 220px;
         width: 90%;

@@ -467,12 +467,12 @@ label {
     }
 }
 
-@media (max-width: 320px) {
+@media (max-width: 426px) {
     main {
         flex-direction: column;
         width: 90%;
         height: auto;
-        margin-top: 140px;
+        margin-top: 146px;
     }
 
     .img-product {
