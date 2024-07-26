@@ -293,7 +293,7 @@ function loadOtherProducts() {
                     productCard.classList.add('product-card');
 
                     const productImage = document.createElement('img');
-                    productImage.src = product.image_1;
+                    productImage.setAttribute('src', product.image_1);
                     productImage.alt = product.name;
 
                     const productName = document.createElement('h3');

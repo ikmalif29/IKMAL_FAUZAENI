@@ -56,7 +56,7 @@ const displayCartProducts = () => {
         productDiv.classList.add('cart-item');
 
         const productImage = document.createElement('img');
-        productImage.src = product.image_1;
+        productImage.setAttribute('src', product.image_1);
         productImage.alt = product.name;
 
         const productInfo = document.createElement('div');

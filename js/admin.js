@@ -500,7 +500,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // event untuk mengedit status pembelian
         imgPayment.addEventListener('click', function () {
             const imageSrc = imgPayment.dataset.imageSrc;
-            popupImage.src = imageSrc;
+            popupImage.setAttribute('src',imageSrc);
             popupContainer.classList.remove('popup-hidden');
             popupContainer.classList.add('popup-visible');
         });

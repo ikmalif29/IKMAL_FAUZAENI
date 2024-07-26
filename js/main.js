@@ -58,7 +58,7 @@ let currentIndex = 0;
 const imagesSlide = document.querySelector('.image-slide');
 //  funtion untuk mengganti image sesuai index,gambar akan berganti 4 detik sekali
 function changeImages() {
-    imagesSlide.src = images[currentIndex].img;
+    imagesSlide.setAttribute('src', images[currentIndex].img);
     currentIndex = (currentIndex + 1) % images.length;
 }
 setInterval(changeImages, 4000);
