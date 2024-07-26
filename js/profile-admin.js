@@ -4,11 +4,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const emailInput = document.getElementById('email');
     const passwordInput = document.getElementById('password');
 
-    // Retrieve admin profile data from localStorage
+    // Ambil data profil admin dari  localStorage
     const adminProfile = JSON.parse(localStorage.getItem('data-admin'));
 
     if (adminProfile) {
-        // Populate form fields with existing data
+        // Isi kolom formulir dengan data yang ada
         fullNameInput.value = adminProfile.fullname || '';
         usernameInput.value = adminProfile.username || '';
         emailInput.value = adminProfile.email || '';
@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const email = emailInput.value;
         const password = passwordInput.value;
 
-        // Update the admin profile data in localStorage
+        // Perbarui data profil admin di Penyimpanan lokal
         const updatedAdminProfile = {
             fullname: fullName,
             username: username,
@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
             password: password
         };
 
-        // Save updated profile to localStorage
+        //Simpan profil yang diperbarui ke Penyimpanan lokal
         localStorage.setItem('data-admin', JSON.stringify(updatedAdminProfile));
 
         alert('Profile Updated:\n' +

@@ -274,7 +274,7 @@ document.getElementById('complete-order').addEventListener('click', () => {
     hidePopup('payment-popup');
     window.location.href = 'profile.html'; // Adjust this URL based on your actual profile page
 });
-
+// menampilkan prooduct yang mungkin di sukai
 function loadOtherProducts() {
     fetch('https://sepokat-store.vercel.app/api/product/get-all')
         .then(response => response.json())
@@ -283,7 +283,7 @@ function loadOtherProducts() {
             const currentProductId = localStorage.getItem('id-product');
             const filteredProducts = products.filter(product => product.id !== currentProductId);
             let currentIndex = 0;
-
+            // menampilkan product lain nya
             function renderProducts(startIndex) {
                 otherProductsGrid.textContent = '';
                 const endIndex = Math.min(startIndex + 4, filteredProducts.length);
