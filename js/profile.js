@@ -94,7 +94,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Membuat elemen gambar
         const image = document.createElement('img');
-        image.src = purchase.products.image;
+        image.setAttribute('src', purchase.products.image);
 
         // Membuat elemen untuk detail
         const detailsDiv = document.createElement('div');
