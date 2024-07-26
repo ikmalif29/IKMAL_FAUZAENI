@@ -3,7 +3,7 @@
     padding: 0;
 }
 
-body{
+body {
     font-family: 'Arial', sans-serif;
 }
 
@@ -113,4 +113,92 @@ main {
 .member p {
     font-size: 16px;
     color: #666;
+}
+
+@media (max-width : 1024px) {
+    .container {
+        max-width: 800px;
+    }
+}
+
+@media (max-width : 768px) {
+    .container {
+        max-width: 600px;
+    }
+
+    .about-section h1 {
+        font-size: 24px;
+    }
+
+    .about-section p {
+        font-size: 14px;
+    }
+
+    .column h2 {
+        font-size: 22px;
+    }
+
+    .column p,
+    .column ul {
+        font-size: 14px;
+    }
+
+    .history h2,
+    .team h2 {
+        font-size: 22px;
+    }
+
+    .member img {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .member h3 {
+        font-size: 14px;
+    }
+    
+    .member p {
+        font-size: 14px;
+    }
+}
+
+@media (max-width : 426px) {
+    .container {
+        max-width: 325px;
+    }
+
+    .about-section h1 {
+        font-size: 20px;
+    }
+
+    .about-section p {
+        font-size: 10px;
+    }
+
+    .column h2 {
+        font-size: 18px;
+    }
+
+    .column p,
+    .column ul {
+        font-size: 10px;
+    }
+
+    .history h2,
+    .team h2 {
+        font-size: 18px;
+    }
+
+    .member img {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .member h3 {
+        font-size: 10px;
+    }
+    
+    .member p {
+        font-size: 10px;
+    }
 }
