@@ -165,6 +165,19 @@ section {
         font-size: 18px;
         margin-left: 576px;
     }
+
+    @media (max-width:888px) {
+        .product-item {
+            width: 200px;
+            height: 220px;
+            gap: 10px;
+        }
+
+        .image-product {
+            width: 160px;
+            height: 160px;
+        }
+    }
 }
 
 @media (max-width : 768px) {
@@ -228,7 +241,7 @@ section {
     }
 }
 
-@media (max-width : 426px) {
+@media (max-width : 428px) {
     .big-container {
         grid-template-columns: repeat(2, 1fr);
         gap: 10px;

@@ -118,7 +118,7 @@
     }
 }
 
-@media (max-width : 426px) and (min-width : 320px){
+@media (max-width : 428px) and (min-width : 320px){
     .footer-content {
         display: block;
         justify-content: center;

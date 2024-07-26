@@ -193,7 +193,7 @@ header {
     }
 }
 
-@media (max-width : 426px) {
+@media (max-width : 428px) {
     header {
         height: auto;
     }
@@ -273,9 +273,18 @@ header {
 
     .cart-count {
         top: 24px;
-        right: 126px;
+        right: 125px;
         padding: 2px 4px;
         font-size: 7px;
+    }
+
+    @media (max-width:361px) {
+        .cart-count {
+            top: 24px;
+            right: 120px;
+            padding: 2px 4px;
+            font-size: 7px;
+        }
     }
 }
 
