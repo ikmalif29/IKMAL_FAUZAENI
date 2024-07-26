@@ -1,13 +1,13 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const aboutSection = document.querySelector('.about-section');
-    const aboutSectionPosition = aboutSection.getBoundingClientRect().top;
+// document.addEventListener('DOMContentLoaded', () => {
+//     const aboutSection = document.querySelector('.about-section');
+//     const aboutSectionPosition = aboutSection.getBoundingClientRect().top;
 
-    window.addEventListener('scroll', () => {
-        if (aboutSectionPosition < screenPosition) {
-            aboutSection.classList.add('about-appear');
-        }
-    });
-});
+//     window.addEventListener('scroll', () => {
+//         if (aboutSectionPosition < 50) {
+//             aboutSection.classList.add('about-appear');
+//         }
+//     });
+// });
 // funtion sroll untuk header
 window.addEventListener('scroll', function () {
     let header = document.querySelector('.main-header');
