@@ -45,7 +45,7 @@ document.getElementById("registerForm").addEventListener("submit", (e) => {
     let baru = {
         username: dataUsername,
         password: dataPass,
-        full_name: dataName,
+        fullName: dataName,
     };
     console.log(baru);
     try {
@@ -56,7 +56,7 @@ document.getElementById("registerForm").addEventListener("submit", (e) => {
         );
         console.log("Data fetched successfully:", data);
         alert(`Sign Up Sucsesfuly`);
-        window.location.reload();
+        // window.location.reload();
     } catch (error) {
         console.error("Error fetching data:", error);
     }

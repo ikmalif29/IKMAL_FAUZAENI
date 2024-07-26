@@ -233,11 +233,11 @@ input {
 }
 
 .image1{
-    height: 296px;
+    display: none;
 }
 
 .overlay-panel img{
-    width: 100%;
+    display: none;
 }
 
 .overlay-left {
@@ -342,4 +342,15 @@ input {
     .container.right-panel-active .overlay-right {
         transform: translateX(20%);
     }
+
+    .image1{
+        display: block;
+        height: 296px;
+    }
+    
+    .overlay-panel img{
+        display: block;
+        width: 100%;
+    }
+    
 }
