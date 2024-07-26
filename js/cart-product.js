@@ -41,7 +41,7 @@ const displayCartProducts = () => {
 
     const idUser = JSON.parse(localStorage.getItem('userLogin')).id;
     const cartByIdUser = cartProducts.filter(cart => cart.id_user == idUser);
-
+    // jika data tidak ada maka akan menampilakna pesan
     if (cartByIdUser.length === 0) {
         const emptyMessage = document.createElement('h1');
         emptyMessage.textContent = 'Your basket is empty. Go to the shop';
@@ -101,13 +101,19 @@ const displayCartProducts = () => {
 
         const checkbox = document.createElement('input');
         checkbox.type = 'checkbox';
-        checkbox.dataset.index = index;
-        checkbox.dataset.price = product.price;
+        checkbox.dataset.index = index; //Menyimpan nilai index pada atribut data index dari checkbox.
+        checkbox.dataset.price = product.price; //Menyimpan nilai price dari product pada atribut data price dari checkbox.
         checkbox.dataset.quantity = product.quantity;
         checkbox.checked = !!selectedProducts[product.id];
+        // bernilai truthy. Operator ganda not (!!) digunakan untuk mengkonversi nilai ke boolean (true atau false). 
+        // Jika selectedProducts[product.id] ada (truthy), maka checkbox akan dicentang (true), 
         checkbox.addEventListener('change', (e) => {
             selectedProducts[product.id] = e.target.checked;
+            // Memperbarui selectedProducts dengan nilai checked dari checkbox yang berubah.
+            //  e.target.checked akan bernilai true jika checkbox dicentang dan false jika tidak.
             localStorage.setItem('selected-products', JSON.stringify(selectedProducts));
+            // Menyimpan selectedProducts yang diperbarui ke localStorage. JSON.stringify 
+            // digunakan untuk mengkonversi objek selectedProducts menjadi string JSON.
             updateTotalPrice();
         });
 
@@ -119,17 +125,17 @@ const displayCartProducts = () => {
 
         cartContainer.appendChild(productDiv);
     });
-
+    //  menambah jumlah
     document.querySelectorAll('.increase').forEach(button => {
         button.addEventListener('click', (e) => {
-            const index = e.target.getAttribute('data-index');
+            const index = e.target.getAttribute('data-index'); // digunakan untuk mendapatkan nilai dari atribut data data-index
             cartProducts[index].quantity++;
             localStorage.setItem('cart-products', JSON.stringify(cartProducts));
             displayCartProducts();
             updateTotalPrice();
         });
     });
-
+    // megurangi jumlah
     document.querySelectorAll('.decrease').forEach(button => {
         button.addEventListener('click', (e) => {
             const index = e.target.getAttribute('data-index');
@@ -142,7 +148,7 @@ const displayCartProducts = () => {
             updateTotalPrice();
         });
     });
-
+    // menghapus product dari cart
     document.querySelectorAll('.delete').forEach(button => {
         button.addEventListener('click', (e) => {
             const index = e.target.getAttribute('data-index');

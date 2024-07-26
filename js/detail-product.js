@@ -1,3 +1,4 @@
+// Fungsi untuk memperbarui jumlah item di keranjang
 const updateCartCount = () => {
     const cartProducts = JSON.parse(localStorage.getItem('cart-products')) || [];
     const idUser = JSON.parse(localStorage.getItem('userLogin')).id
@@ -66,10 +67,11 @@ document.addEventListener('DOMContentLoaded', () => {
             let cartProducts = JSON.parse(localStorage.getItem('cart-products')) || [];
             const existingProductIndex = cartProducts.findIndex(product => product.id === localStorage.getItem('id-product'));
             const user = JSON.parse(localStorage.getItem('userLogin'));
-
+            // mengecek apakah product sudah terdapat di localstorage
+            // juka udah maka hanya jumlah nya saja yang berubah,cart count tidak berubah
             if (existingProductIndex !== -1) {
                 cartProducts[existingProductIndex].quantity++;
-            } else {
+            } else {//jika product belum ada maka data product akan masuk local storage
                 cartProducts.push({
                     id: localStorage.getItem('id-product'),
                     id_user: user.id,
@@ -195,7 +197,7 @@ const startTimer = (duration, display) => {
             clearInterval(intervalId);
             alert('Order has been canceled due to timeout.');
             // Redirect to cart page
-            window.location.href = 'detail-product.html'; // Adjust this URL based on your actual cart page
+            window.location.href = 'detail-product.html'; //Sesuaikan URL ini berdasarkan halaman keranjang Anda yang sebenarnya
         }
     }, 1000);
 };
