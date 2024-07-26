@@ -457,9 +457,6 @@ document.addEventListener('DOMContentLoaded', () => {
         productPriceCell.textContent = sale.products.price;
         row.appendChild(productPriceCell);
 
-        const productQuantityCell = document.createElement('td');
-        productQuantityCell.textContent = "1";
-        row.appendChild(productQuantityCell);
 
         const totalCostCell = document.createElement('td');
         totalCostCell.textContent = sale.subtotal;

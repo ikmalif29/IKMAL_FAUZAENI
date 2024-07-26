@@ -107,9 +107,9 @@ document.addEventListener('DOMContentLoaded', () => {
         price.classList.add('price')
         price.textContent = `Price: $${purchase.products.price}`;
         
-        const quantity = document.createElement('p');
-        quantity.classList.add('quantity')
-        quantity.textContent = `Quantity: ${purchase.subtotal}`;
+        // const quantity = document.createElement('p');
+        // quantity.classList.add('quantity')
+        // quantity.textContent = `Quantity: ${purchase.subtotal}`;
 
         const status = document.createElement('div')
         const statusProduct = document.createElement('h2')
@@ -135,7 +135,7 @@ document.addEventListener('DOMContentLoaded', () => {
         detailsDiv.className = 'details';
         detailsDiv.appendChild(productName);
         detailsDiv.appendChild(price);
-        detailsDiv.appendChild(quantity);
+        // detailsDiv.appendChild(quantity);
 
         // Menggabungkan elemen gambar dan detail ke dalam item pembelian
         purchaseItemDiv.appendChild(image);

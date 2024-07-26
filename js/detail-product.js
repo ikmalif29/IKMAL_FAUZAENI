@@ -52,34 +52,39 @@ document.addEventListener('DOMContentLoaded', () => {
     const priceProduct = document.querySelector(".price");
     priceProduct.textContent = `IDR ${parseInt(localStorage.getItem("price-product")).toLocaleString('id-ID')}`;
 
-    
+
     const stockProduct = document.querySelector('.stock')
     stockProduct.textContent = `Stock Product : Evailebel`;
-    
+
     const addToCartButton = document.querySelector(".add-to-cart");
     addToCartButton.addEventListener('click', (event) => {
         event.preventDefault();
-        let cartProducts = JSON.parse(localStorage.getItem('cart-products')) || [];
-        const existingProductIndex = cartProducts.findIndex(product => product.id === localStorage.getItem('id-product'));
-        const user = JSON.parse(localStorage.getItem('userLogin'));
-
-        if (existingProductIndex !== -1) {
-            cartProducts[existingProductIndex].quantity++;
+        // mengecek apakah sudah login atau belum
+        if (!JSON.parse(localStorage.getItem('userLogin'))) {
+            window.location.href = "../html/not-login.html";
         } else {
-            cartProducts.push({
-                id: localStorage.getItem('id-product'),
-                id_user: user.id,
-                name: localStorage.getItem('name-product'),
-                price: localStorage.getItem('price-product'),
-                image_1: localStorage.getItem('image-product'),
-                category: localStorage.getItem('categary-product'),
-                stock: localStorage.getItem('stock-product'),
-                quantity: 1
-            });
+            let cartProducts = JSON.parse(localStorage.getItem('cart-products')) || [];
+            const existingProductIndex = cartProducts.findIndex(product => product.id === localStorage.getItem('id-product'));
+            const user = JSON.parse(localStorage.getItem('userLogin'));
+
+            if (existingProductIndex !== -1) {
+                cartProducts[existingProductIndex].quantity++;
+            } else {
+                cartProducts.push({
+                    id: localStorage.getItem('id-product'),
+                    id_user: user.id,
+                    name: localStorage.getItem('name-product'),
+                    price: localStorage.getItem('price-product'),
+                    image_1: localStorage.getItem('image-product'),
+                    category: localStorage.getItem('categary-product'),
+                    stock: localStorage.getItem('stock-product'),
+                    quantity: 1
+                });
+            }
+            localStorage.setItem('cart-products', JSON.stringify(cartProducts));
+            alert(`${localStorage.getItem('name-product')} telah ditambahkan ke keranjang!`);
+            updateCartCount();
         }
-        localStorage.setItem('cart-products', JSON.stringify(cartProducts));
-        alert(`${localStorage.getItem('name-product')} telah ditambahkan ke keranjang!`);
-        updateCartCount();
     });
 
     let index = 1;
@@ -133,11 +138,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 document.addEventListener('DOMContentLoaded', () => {
-    
+
     const checkoutButton = document.querySelector('.checkout');
     checkoutButton.addEventListener('click', () => {
-        displayCheckoutProducts();
-        showPopup('checkout-popup');
+        if (JSON.parse(localStorage.getItem('userLogin'))) {
+            displayCheckoutProducts();
+            showPopup('checkout-popup');
+        } else {
+            window.location.href = "../html/not-login.html";
+        }
     });
 
     loadOtherProducts();
@@ -246,7 +255,7 @@ document.getElementById('complete-order').addEventListener('click', () => {
         products: {
             name: localStorage.getItem('name-product'),
             price: parseInt(localStorage.getItem('price-product')),
-            image:localStorage.getItem('image-product2'),
+            image: localStorage.getItem('image-product2'),
             quantity: 1
         },
         subtotal: parseInt(localStorage.getItem('price-product')),
