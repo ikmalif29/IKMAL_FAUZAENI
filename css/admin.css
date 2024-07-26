@@ -291,3 +291,7 @@ button.delete {
     margin-top: 20px;
     padding: 10px 20px;
 }
+
+.payment-link{
+    cursor: pointer;
+}
