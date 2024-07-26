@@ -96,6 +96,7 @@ button[type="submit"]:hover {
 
 /* Button logout di pojok kanan bawah */
 #logout-btn {
+    margin-top: 10px;
     background-color: #e74c3c;
     color: white;
     border: none;
