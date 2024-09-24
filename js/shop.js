@@ -18,16 +18,15 @@ const hideLoading = () => {
 //  memanggil funtion showloading
 showLoading();
 //  pengambilan data menggunakan fetch
-fetch(apiUrl)
-    .then((response) => response.json())
+fetch(apiUrl) // Mengambil data dari URL API yang diberikan
+    .then((response) => response.json()) // Mengonversi respons dari API ke format JSON
     .then((res) => {
-        //  jika data product sudah muncul maka loading akan hilang
-        hideLoading();
-        footer.style.display = 'block'
-        products = res;
-        displayProducts(products, currentPage);
-        setupPagination(products);
-        // mengatur pagnation
+        // Jika data produk sudah muncul maka loading akan hilang
+        hideLoading(); // Fungsi untuk menyembunyikan elemen loading
+        footer.style.display = 'block'; // Menampilkan elemen footer
+        products = res; // Menyimpan data produk yang diterima dari API ke variabel 'products'
+        displayProducts(products, currentPage); // Menampilkan produk pada halaman saat ini
+        setupPagination(products); // Mengatur pagination berdasarkan jumlah produk
     });
 // funtion untuk mengupdate angka di keranjang,mengambil data keranjang sesuai id user
 const updateCartCount = () => {
@@ -158,7 +157,7 @@ const displayProducts = (productsToDisplay, page) => {
 const setupPagination = (products) => {
     const pagination = document.getElementById('pagination');
     pagination.textContent = '';
-    const pageCount = Math.ceil(products.length / itemsPerPage);
+    const pageCount = Math.ceil(products.length / itemsPerPage);//membandingkan jumlah data dibagi item per page
 
     for (let i = 1; i <= pageCount; i++) {
         const button = document.createElement('button');

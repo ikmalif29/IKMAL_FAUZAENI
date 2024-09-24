@@ -153,7 +153,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 plugins: { //Mengatur plugin yang digunakan dalam grafik.
                     legend: { //  Mengatur tampilan legenda grafik
                         display: false //Mengatur apakah legenda ditampilkan atau tidak. 
-                                        // Dalam hal ini, legenda disembunyikan (false).
+                        // Dalam hal ini, legenda disembunyikan (false).
                     }
                 }
             }
@@ -500,7 +500,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // event untuk mengedit status pembelian
         imgPayment.addEventListener('click', function () {
             const imageSrc = imgPayment.dataset.imageSrc;
-            popupImage.setAttribute('src',imageSrc);
+            popupImage.setAttribute('src', imageSrc);
             popupContainer.classList.remove('popup-hidden');
             popupContainer.classList.add('popup-visible');
         });
