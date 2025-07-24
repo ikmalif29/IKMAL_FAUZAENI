@@ -105,7 +105,7 @@ const displayProducts = (productsToDisplay, page) => {
             localStorage.setItem('image-product2', r.image_2);
             localStorage.setItem('name-product', r.name);
             localStorage.setItem('price-product', r.price);
-            localStorage.setItem('stock-product', r.stock);
+            localStorage.setItem('stock-product', r.stok);
             localStorage.setItem('category-product', r.category);
             window.location = 'detail-product.html';
         });

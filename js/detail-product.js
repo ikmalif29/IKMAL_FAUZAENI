@@ -79,7 +79,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     price: localStorage.getItem('price-product'),
                     image_1: localStorage.getItem('image-product'),
                     category: localStorage.getItem('categary-product'),
-                    stock: localStorage.getItem('stock-product'),
+                    stok: localStorage.getItem('stock-product'),
                     quantity: 1
                 });
             }

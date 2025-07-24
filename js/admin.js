@@ -312,7 +312,7 @@ document.addEventListener('DOMContentLoaded', () => {
         row.appendChild(nameCell);
 
         const categoryCell = document.createElement('td');
-        categoryCell.textContent = product.stock;
+        categoryCell.textContent = product.stok;
         row.appendChild(categoryCell);
 
         const priceCell = document.createElement('td');
