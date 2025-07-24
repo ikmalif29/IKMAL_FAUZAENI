@@ -276,7 +276,7 @@ document.getElementById('complete-order').addEventListener('click', () => {
 });
 // menampilkan prooduct yang mungkin di sukai
 function loadOtherProducts() {
-    fetch('https://sepokat-store.vercel.app/api/product/get-all')
+    fetch('https://api-sepokat.vercel.app/api/product/get-all')
         .then(response => response.json())
         .then(products => {
             const otherProductsGrid = document.getElementById('other-products-grid');
