@@ -34,11 +34,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const fetchData2 = async () => {
         try {
             // Ambil total pengguna dan produk dari API
-            const usersResponse = await fetch('https://sepokat-store.vercel.app/api/user/get-all');
+            const usersResponse = await fetch('https://api-sepokat.vercel.app/api/user/get-all');
             const usersData = await usersResponse.json();
             totalUsersElem.textContent = usersData.length;
 
-            const productsResponse = await fetch('https://sepokat-store.vercel.app/api/product/get-all');
+            const productsResponse = await fetch('https://api-sepokat.vercel.app/api/product/get-all');
             const productsData = await productsResponse.json();
             totalProductsElem.textContent = productsData.length;
 
@@ -171,7 +171,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const fetchData = async () => {
         try {
-            const response = await fetch('https://sepokat-store.vercel.app/api/user/get-all');
+            const response = await fetch('https://api-sepokat.vercel.app/api/user/get-all');
             const data = await response.json();
             return data;
         } catch (error) {
@@ -291,7 +291,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const fetchProductData = async () => {
         try {
-            const response = await fetch('https://sepokat-store.vercel.app/api/product/get-all');
+            const response = await fetch('https://api-sepokat.vercel.app/api/product/get-all');
             const data = await response.json();
             return data;
         } catch (error) {

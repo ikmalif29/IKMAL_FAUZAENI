@@ -15,43 +15,23 @@ document.addEventListener('DOMContentLoaded', () => {
 const images = [
     {
         id: 1,
-        img: 'https://compass-ecom-bucket.s3-ap-southeast-1.amazonaws.com/images/productdetail/9504a678480014be04e4cb40ccc130e5dbaaabec.png'
+        img: 'https://cdn.shopify.com/s/files/1/0712/0397/9503/files/a840c48e-feac-4510-92fb-4dbfbcc5842a.png?v=1726903075&width=1000&height=1000&crop=center'
     },
     {
         id: 2,
-        img: 'https://compass-ecom-bucket.s3-ap-southeast-1.amazonaws.com/images/productdetail/6b1560fc2333ef08ffd493497b5f74e76f97a1bd.png',
+        img: 'https://cdn.shopify.com/s/files/1/0712/0397/9503/files/whatsapp_image_2024-10-07_at_16.32.31.jpg?v=1728378438&width=1000&height=1000&crop=center',
 
     },
     {
         id: 3,
-        img: 'https://compass-ecom-bucket.s3-ap-southeast-1.amazonaws.com/images/productdetail/867a779492cc2b00888bde8ed97a08809b920e01.png',
+        img: 'https://cdn.shopify.com/s/files/1/0712/0397/9503/files/Tribune-RedGum1.jpg?v=1729075946&width=1000&height=1000&crop=center',
 
     },
     {
         id: 4,
-        img: 'https://compass-ecom-bucket.s3-ap-southeast-1.amazonaws.com/images/productdetail/38e73ffa3945a58fe931153462fe375ae4c74b95.png',
+        img: 'https://cdn.shopify.com/s/files/1/0712/0397/9503/files/product_tribune_darbotz_online__1.png?v=1730656067&width=1000&height=1000&crop=center',
 
-    },
-    {
-        id: 5,
-        img: 'https://www.jakjekstore.com/wp-content/uploads/2023/08/c1ddcfd9-b3f6-4f2e-b51a-cec68a774896.jpg',
-
-    },
-    {
-        id: 6,
-        img: 'https://www.jakjekstore.com/wp-content/uploads/2023/08/d2e581348ede99eceffd7911a2a30377ad89ef84.jpg',
-
-    },
-    {
-        id: 7,
-        img: 'https://compass-ecom-bucket.s3-ap-southeast-1.amazonaws.com/images/productdetail/4fb26b739aa3f574b69cb6fbd67c663f62e60ba9.png',
-
-    },
-    {
-        id: 8,
-        img: 'https://compass-ecom-bucket.s3-ap-southeast-1.amazonaws.com/images/productdetail/af94b72e659969ba4452c89e6287b4c5ea3023d6.png',
-
-    },
+    }
 ];
 // index untuk mengganti gambgar
 let currentIndex = 0;

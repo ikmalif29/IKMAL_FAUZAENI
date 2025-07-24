@@ -1,4 +1,4 @@
-import { apiFetch } from "./utils.js";
+// import { apiFetch } from "./utils.js";
 
 const container = document.getElementById("container");
 // fitur login untuk user,data akan di cek di api

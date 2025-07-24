@@ -1,4 +1,4 @@
-const apiUrl = 'https://sepokat-store.vercel.app/api/product/get-all';
+const apiUrl = 'https://api-sepokat.vercel.app/api/product/get-all';
 let products = [];
 let currentPage = 1;
 const itemsPerPage = 15;

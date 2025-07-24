@@ -10,21 +10,24 @@ buttonLogin.addEventListener("click", async (event) => {
 
   try {
     const users = await apiFetch(
-      "https://sepokat-store.vercel.app/api/user/get-all"
+      "https://api-sepokat.vercel.app/api/user/get-all"
     );
 
     console.log(users);
 
     const username = document.querySelector("#username").value;
     const password = document.querySelector("#password").value;
+    console.log(username);
+    console.log(password);
 
     if (username == "" || password == "") {
       return alert("Username atau password harus diisi !!!");
     }
     // pengecekan username dan password
     const user = users.find(
-      (user) => user.username === username && user.pasword === password
+      (user) => user.username === username && user.password === password
     );
+    console.log(user);
     // jika username dan password benar makan akan berpindah ke halaman index atau home
     if (user) {
       localStorage.setItem("userLogin", JSON.stringify(user));
@@ -58,7 +61,7 @@ document
     console.log(baru);
     try {
       const data = await apiFetch(
-        "https://sepokat-store.vercel.app/api/user/register",
+        "https://api-sepokat.vercel.app/api/user/register",
         "POST",
         baru
       );
